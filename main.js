@@ -21,8 +21,8 @@ function drawBackground() {
       const mappedX = -15 + (x / canvas.width) * 10;
       const mappedY = -2 + (y / canvas.height) * 6;
 
-      // const value = f(mappedX, mappedY);
-      const value = 200; //90 is nice
+      const value = f(mappedX, mappedY);
+      // const value = 200; //90 is nice
       const normalized = Math.log(value + 0.8) / Math.log(21); // maps 0–20 → 0–1 smoothly
 
 
@@ -36,7 +36,7 @@ function drawBackground() {
   }
 }
 
-//drawBackground();
+drawBackground();
 
 
 

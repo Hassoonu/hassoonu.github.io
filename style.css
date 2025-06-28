@@ -46,7 +46,7 @@ p {
 
 .intro {
   background-color: transparent;
-  color: #2e2e2e;
+  color: #d8d7d7;
   border-radius: 10px;
   width: 600px;
   height: 60px;
@@ -115,6 +115,7 @@ p {
   opacity: 0;
   white-space: nowrap;  /* Keeps text on one line */
   transition: opacity 0.3s;
+  font-size: 0.8em;
 }
 
 .tooltip:hover .tooltiptext {
