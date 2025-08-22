@@ -102,8 +102,8 @@ p {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: #333;
-  color: #fff;
+  background-color: #dbcfab56;
+  color: #1f1616;
   text-align: center;
   border-radius: 8px;
   padding: 0.5em 1em;  /* Scales with text size */
