@@ -4,17 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
     <canvas id="bgCanvas"></canvas>
-    <header>
-        <h1 class="intro">Hello!</h1>
-    </header>
-
-    <main>
-        <section class="about">
-            <div class="socials">
+    <div class="socials">
+                <a href="../index.html" class="tooltip">Home Page
+                    <span class="tooltiptext">Go back to main page</span>
+                </a>
                 <a href="https://github.com/Hassoonu" class="tooltip" target="_blank" rel="noopener noreferrer">GitHub
                     <span class="tooltiptext">Check out my GitHub</span>
                 </a>
@@ -42,67 +39,13 @@
                     });
                 });
                 </script>
-
-                <a href="HasanAlSaeedi Resume.pdf" download class="tooltip" target="_blank" rel="noopener noreferrer">Resumé
-                    <span class="tooltiptext">Download my Resumé</span>
-                </a>
             </div>
-
-            <div class="profile">
-                <div class="avatar">
-                    <img src="images/selfie.png" alt="Me!" />
-                </div>
-                <p>My name is Hasan Al Saeedi and I'm a Computer Science student @ the University of Illinois at Urbana-Champaign. My interests lie in Parallel Computing, Networking, and Data Analysis.</p>
-            </div>
-
-            <div class="card">
-                <h3>What I'm working on now!</h3>
-                <p>I'm working under <a href="https://ece.illinois.edu/about/directory/faculty/kindrtnk" target="_blank" style="text-decoration:none; color: #8a6a3d;" >Professor Volodymyr Kindratenko</a> 
-                alongside members of the <a href="https://publicengagement.illinois.edu/uiuc-msi-alliance/" target="_blank" style="text-decoration:none; color: #8a6a3d;">MSI Alliance REU</a> to understand the Fractal Dimension of
-                surfaces on Antarctica. As a student researcher, my goal is to understand the techniques utilized within the paper <a>here</a>, and to implement them in an efficient manner. We're still very early into the project, however I've been developing parts of the algorithm described in the paper and breaking it down to make its core elements clearer so that the different techniques can be utilized for different types of data.</p>
-            </div>
-            <div class="card">
-                <h3>What I'm learning now!</h3>
-                <p>During the summer, I have a lot of personal projects that I'm working on so that I'm more skilled as a programmer and so that I'm more preparred to take on complex projects. <br> So far, what I'm working on includes:
-                    <ul style="padding-left: 30px;">
-                        <li><a href="https://github.com/Hassoonu/F1WDCTrackerFFI" target="_blank" class="project_links" id="wdcProject">F1 WDC Tracker</a></li>
-                        <li><a href="https://github.com/Hassoonu/CookieGPT" target="_blank" class="project_links" id="cookieProject">CookieGPT</a></li>
-                        <li><a href="https://github.com/Hassoonu/webScrapper" target="_blank" class="project_links" id="scrapProject">Web Scraper</a></li>
-                        <li><a href="https://github.com/Hassoonu/electronJS" target="_blank" class="project_links" id="electronProject">ElectronJS</a></li>
-                        <li><a href="https://github.com/Hassoonu" target="_blank" class="project_links">And More!</a></li>
-                    </ul> <br>
-                </p>
-                <h3><a href="#wdcProject" class="project_header">F1 WDC Tracker</a></h3>
-                <p><b>Context:</b> Formula 1 is a racing series that features 20 Drivers racing around different tracks in different parts of the world. After each race, a driver gets a certain amount of points based on position, incurred penalties, and more. At the end of the year, the driver with the most points becomes the World Champion. This championship for the drivers is called the World Drivers' Championship (WDC)</p>
-                <p><br>The goal of my project is to code a program that communicates with an API over the network to receive data on how the WDC is going. This data will include the drivers, their names, and the points they have at the point of program execution.</p>
-                <p><br>After getting this data, the program will run ElectronJS to create a window, and display this data in an organized matter. This output will show the drivers in order of how they're doing in the championship, their points, and when the next race starts.</p>
-                <p><br>This program will start as the user startsup their device, this is mostly to add a layer of complexity so that I can learn as much as I can while working on this project.</p>
-                <br>
-                <h3><a href="#cookieProject" class="project_header">CookieGPT</a></h3>
-                <p>This project is aimed that creating an AI/Transformer that is specialized in Cookies. Ideally, this model will know about MANY variations of cookie recipes, troubleshooting when baking cookies goes wrong, chemical composition of cookies and how they behave in heat and when provided different stimuli, and more.</p>
-                <br>
-                <p>This project has many steps. First, I'd need to collect and scrap data about cookies from many different sources. After that, store the data in a database, then create the Transformer model and begin training. I'd also like to know how to create a simple and easy to use UI that lets users utilize the software.</p>
-                <br>
-                <h3><a href="#scrapProject" class="project_header">Web Scraper</a></h3>
-                <p>I've been wanting to learn how to do web scrapping for a bit now. Since I've started the CookieGPT project, I realized I can try and create my own web scrapping spider to create a layer of complexity to the project and to learn web scrapping. I think it's much better than simply downloading a dataset and would give me more control over the things cookieGPT would know.</p>
-                <br>
-                <h3><a href="#electronProject" class="project_header">ElectronJS</a></h3>
-                <p>I recently learned about ElectronJS when looking for software I can use to create a user UI for other projects. It's very useful as a tool because no matter what project I make, I am more than likely going to need a way to have people interact with it.</p>
-                <br>
-                <p>So far, I've learned how to do the basics. I plan on learning and experimenting more with it when I finish more projects, since each project is going to have different requirements.</p>
-            </div>
-        </section>
-
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanjqgel" method="POST">
-            <input type="text" name="firstName" placeholder="First name*" class="input-half" required />
-            <input type="text" name="lastName" placeholder="Last Name*" class="input-half" required />
-            <input type="email" name="email" placeholder="Return email*" class="input-full" required />
-            <input type="text" name="subject" placeholder="Subject*" class="input-full" required />
-            <textarea name="message" placeholder="Message*" class="input-full message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-
-        <div id="form-status"></div>
+    <header>
+        <h1 class="resume_intro">Resume</h1>
+    </header>
+    
+    <main class="resume-container">
+        <embed src="../HasanAlSaeedi Resume.pdf" class="responsive_pdf" />
     </main>
 
     <footer style="text-align:center; padding:20px 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; color:#555;">
@@ -110,7 +53,6 @@
   <p>
     <a href="https://github.com/Hassoonu" target="_blank" rel="noopener" style="color:#555; text-decoration:none; margin-right:15px;">🐙 GitHub</a>
     <a href="https://www.linkedin.com/in/hasan-alsaeedi/" target="_blank" rel="noopener" style="color:#555; text-decoration:none; margin-right:15px;">🔗 LinkedIn</a>
-    <a href="HasanAlSaeedi Resume.pdf" download style="color:#555; text-decoration:none;">📂 Resume</a>
   </p>
   <p><a href="#top" style="color:#555; text-decoration:none;">Back to top ↑</a></p>
 </footer>

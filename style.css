@@ -27,7 +27,8 @@ header {
   color: black;
   background: transparent;
   border-radius: 12px;
-  max-width: 600px;
+  /* max-width: 600px; */
+  max-width: 80vw;
 }
 
 main {
@@ -35,9 +36,23 @@ main {
   border-radius: 12px;
   padding: 20px;
   width: 90%;
-  max-width: 600px;
+  max-width: 1000px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   /* padding-top: 50px; */
+}
+
+main embed {
+  /* Treat the embed element as a block element */
+  display: block;
+  
+  /* Set the left and right margins to 'auto' to divide the remaining space equally */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Make sure the element has a defined width for 'margin: auto' to work */
+  /* Since you defined width="800px" in the HTML, this should be fine. */
+  /* If you prefer to define the width in CSS: */
+  /* width: 800px; */
 }
 
 p {
@@ -67,7 +82,7 @@ p {
   background-color: #f7efd6;  /* light gray background */
   padding: 20px;
   border-radius: 12px;
-  max-width: 600px;   /* keep it consistent with main */
+  max-width: 1000px;   /* keep it consistent with main */
   margin: 0 auto 20px auto; /* center and spacing */
   box-shadow: 0 0 12px rgba(0,0,0,0.05);
 }
@@ -230,6 +245,30 @@ p {
   min-height: 180px;
   resize: none;
 }
+
+.resume-container {
+  /* 1. Remove the maximum width restriction for this specific layout */
+  max-width: 100%; 
+  width: 100%;
+
+  /* 2. Use Flexbox on the parent to center the PDF */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Optional: Align to the top */
+  
+  /* 3. Remove the box shadow and padding if you only want the PDF to show */
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Updated PDF styles */
+.responsive_pdf {
+  display: block;
+  width: 100%;         /* takes full width of its container */
+  max-width: 900px;    /* or 650px, whatever matches the resume */
+  height: 90vh;        /* keep readable height */
+}
+
 
 #form-status {
   margin-top: 1em;
