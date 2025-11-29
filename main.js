@@ -90,6 +90,70 @@ function animate(time) {
 requestAnimationFrame(animate);
 
 
+const slides = [
+  { img: "images/selfie.png", caption: "Test, this is me" },
+  { img: "images/LETSGO.png", caption: "TEST, emoji thing" },
+  { img: "img/photo3.jpg", caption: "Description for photo 3" },
+  { img: "img/photo4.jpg", caption: "Description for photo 4" }
+];
+// ========================================
+
+let index = 0;
+let autoSlideInterval;
+
+const imageEl = document.getElementById("carousel-image");
+const descEl = document.getElementById("carousel-description");
+const dotsContainer = document.getElementById("carousel-dots");
+const prevBtn = document.getElementById("carousel-prev");
+const nextBtn = document.getElementById("carousel-next");
+
+// Create dots based on slide count
+slides.forEach((_, i) => {
+  const dot = document.createElement("button");
+  dot.addEventListener("click", () => goToSlide(i));
+  dotsEl.appendChild(dot);
+});
+
+function updateSlide() {
+  imageEl.classList.remove("visible"); // fade out
+
+  setTimeout(() => {
+    imageEl.src = slides[index].img;
+    captionEl.textContent = slides[index].caption;
+
+    imageEl.classList.add("visible"); // fade in
+
+    // update dots
+    [...dotsEl.children].forEach((dot, i) =>
+      dot.classList.toggle("active", i === index)
+    );
+  }, 200);
+}
+
+function goToSlide(i) {
+  index = i % slides.length;
+  if (index < 0) index = slides.length - 1;
+  updateSlide();
+  restartAutoSlide();
+}
+
+function nextSlide() { goToSlide(index + 1); }
+function prevSlide() { goToSlide(index - 1); }
+
+// auto slide every 5 seconds
+function restartAutoSlide() {
+  clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(nextSlide, 5000);
+}
+
+prevBtn.addEventListener("click", prevSlide);
+nextBtn.addEventListener("click", nextSlide);
+
+// initialize
+updateSlide();
+restartAutoSlide();
+
+
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault(); // stop the normal form submission
 
