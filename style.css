@@ -4,9 +4,9 @@
   --bg-card: #0a0b0e; /*#fefae0;*/
   --bg-social: #111318; /*#f7efd6;*/
   --bg-social-hover: #1e222c; /*#dbcfab;*/
-  --bg-tooltip: #1e222c;/*#dbcfab56;*/
+  --bg-tooltip: #212326;/*#dbcfab56;*/
   --bg-contact-form: #111318;/*#f7efd6;*/
-  --bg-button: #283618;
+  --bg-button: #111f27;
   --bg-button-hover: #1e222c;/*#dda15e;*/
 
   --text-main: #e6e9f0;/*#2e2e2e;*/ 
@@ -130,6 +130,12 @@ p {
 .tooltip {
   position: relative;
   display: inline-block;
+}
+
+a.tooltip-btn {
+  background-color: var(--bg-tooltip);
+  padding: 6px 10px;
+  border-radius: 50%;
 }
 
 .tooltip .tooltiptext {
@@ -318,6 +324,57 @@ footer {
   background: black;
 }
 
+canvas#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: calc(100vh - 120px);
+}
+
+.responsive_pdf {
+  width: 100%;
+  max-width: 900px;
+  height: 85vh;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.resume_intro {
+  color: var(--text-main);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;      /* crops cleanly without stretching */
+  border-radius: 10px;
+  display: block;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.85em;
+  margin-top: 6px;
+  color: #aaa;
+}
 
 /* {
   box-sizing: border-box;

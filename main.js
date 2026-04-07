@@ -1,4 +1,3 @@
-// ✅ Canvas / star animation
 const canvas = document.getElementById("bgCanvas");
 if (canvas) {
   const ctx = canvas.getContext("2d");
@@ -78,7 +77,6 @@ if (canvas) {
   requestAnimationFrame(animate);
 }
 
-// ✅ Contact form
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
   contactForm.addEventListener("submit", async function (e) {

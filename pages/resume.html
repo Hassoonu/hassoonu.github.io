@@ -3,60 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Resume – Hasan AlSaeedi</title>
   <link rel="stylesheet" href="../style.css" />
+  <style>
+  </style>
 </head>
 <body>
-    <canvas id="bgCanvas"></canvas>
+  <canvas id="bgCanvas"></canvas>
+
+  <header>
+    <h1 class="resume_intro">Resume</h1>
+  </header>
+
+  <main class="resume-container">
     <div class="socials">
-                <a href="../index.html" class="tooltip">Home Page
-                    <span class="tooltiptext">Go back to main page</span>
-                </a>
-                <a href="https://github.com/Hassoonu" class="tooltip" target="_blank" rel="noopener noreferrer">GitHub
-                    <span class="tooltiptext">Check out my GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/hasan-alsaeedi/" class="tooltip" target="_blank" rel="noopener noreferrer">LinkedIn
-                    <span class="tooltiptext">Add me on LinkedIn</span>
-                </a>
-                <a href="#" id="copyEmail" class="tooltip">Email
-                    <span class="tooltiptext" id="tooltipText">Reach out</span>
-                </a>
-                <script>
-                document.getElementById('copyEmail').addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent navigation
-                
-                    const email = "halsae2@illinois.edu";
-                    navigator.clipboard.writeText(email).then(function() {
-                        // Show feedback in tooltip
-                        const tooltip = document.getElementById('tooltipText');
-                        tooltip.textContent = "Copied!";
-                        setTimeout(() => {
-                            tooltip.textContent = "Reach out!";
-                        }, 1500);
-                    }, function(err) {
-                        // Fallback if copy fails
-                        alert('Failed to copy email');
-                    });
-                });
-                </script>
-            </div>
-    <header>
-        <h1 class="resume_intro">Resume</h1>
-    </header>
-    
-    <main class="resume-container">
-        <embed src="../HasanAlSaeedi Resume.pdf" class="responsive_pdf" />
-    </main>
+      <a href="../index.html" class="tooltip tooltip-btn">Home
+        <span class="tooltiptext">Go back to main page</span>
+      </a>
+      <a href="https://github.com/Hassoonu" class="tooltip tooltip-btn" target="_blank" rel="noopener noreferrer">GitHub
+        <span class="tooltiptext">Check out my GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/hasan-alsaeedi/" class="tooltip tooltip-btn" target="_blank" rel="noopener noreferrer">LinkedIn
+        <span class="tooltiptext">Add me on LinkedIn</span>
+      </a>
+      <a href="#" id="copyEmail" class="tooltip tooltip-btn">Email
+        <span class="tooltiptext" id="tooltipText">Reach out</span>
+      </a>
+    </div>
 
-    <footer style="text-align:center; padding:20px 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; color:#555;">
-  <p>© 2025 Hasan A. — Coding for a better world! &#x1F30D;</p>
-  <p>
-    <a href="https://github.com/Hassoonu" target="_blank" rel="noopener" style="color:#555; text-decoration:none; margin-right:15px;">🐙 GitHub</a>
-    <a href="https://www.linkedin.com/in/hasan-alsaeedi/" target="_blank" rel="noopener" style="color:#555; text-decoration:none; margin-right:15px;">🔗 LinkedIn</a>
-  </p>
-  <p><a href="#top" style="color:#555; text-decoration:none;">Back to top ↑</a></p>
-</footer>
+    <iframe
+      src="../HasanAlSaeedi Resume.pdf#navpanes=0&zoom=98"
+      class="responsive_pdf"
+      title="Hasan AlSaeedi Resume"
+    ></iframe>
+  </main>
 
-<script src="main.js"></script>
+  <footer style="text-align:center; padding:20px 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; color:#555;">
+    <p>© 2025 Hasan A. — Coding for a better world! &#x1F30D;</p>
+    <p>
+      <a href="https://github.com/Hassoonu" target="_blank" rel="noopener" style="color:#555; text-decoration:none; margin-right:15px;">🐙 GitHub</a>
+      <a href="https://www.linkedin.com/in/hasan-alsaeedi/" target="_blank" rel="noopener" style="color:#555; text-decoration:none; margin-right:15px;">🔗 LinkedIn</a>
+    </p>
+    <p><a href="#top" style="color:#555; text-decoration:none;">Back to top ↑</a></p>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    document.getElementById('copyEmail').addEventListener('click', function (e) {
+      e.preventDefault();
+      navigator.clipboard.writeText("halsae2@illinois.edu").then(function () {
+        const tooltip = document.getElementById('tooltipText');
+        tooltip.textContent = "Copied!";
+        setTimeout(() => { tooltip.textContent = "Reach out!"; }, 1500);
+      }, function () {
+        alert('Failed to copy email');
+      });
+    });
+  </script>
 </body>
 </html>
