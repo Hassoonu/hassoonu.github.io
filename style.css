@@ -376,6 +376,11 @@ figcaption {
   color: #aaa;
 }
 
+.tweet-embed {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
 /* {
   box-sizing: border-box;
   margin: 0;
