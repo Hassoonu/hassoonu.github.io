@@ -367,6 +367,7 @@ canvas#bgCanvas {
   object-fit: cover;      /* crops cleanly without stretching */
   border-radius: 10px;
   display: block;
+  zoom: 2.0;
 }
 
 figcaption {
