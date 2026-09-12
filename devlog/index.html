@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="dev_style.css"/>
+  <!-- <meta http-equiv="Permissions-Policy" content="unload=*" /> -->
+</head>
+<body>
+    <div class="navbar">
+        <div class="my-name">
+            <h1>Hasan Al Saeedi</h1>
+        </div> 
+
+        <nav class="nav-list">
+            <a href="..">About Me</a>  
+            <!-- <a href="../posts/">Posts</a>    
+            <a href="../projects/">Projects</a>    -->
+            <a href="#" class="active">Dev Log</a>
+        </nav>
+        
+        <div class="nav-button"><a href="https://cal.com/hasan-al-saeedi" target="_blank" rel="noopener noreferrer">Schedule a call</a></div>
+    </div>
+
+    <canvas id="bgCanvas"></canvas>
+    <header>
+        <h1 class="intro"></h1>
+    </header>
+    
+    <div class="main-container">
+    <!-- Main div block for everything below the header -->
+
+        <!-- left menu -->
+        <aside class="sidebar">
+            <nav>
+                <a href="..">
+                    About Me
+                </a>
+                <!-- <a href="../posts/">
+                    Posts
+                </a>
+                <a href="../projects/">
+                    Projects
+                </a> -->
+                <a href="#">
+                    Dev Log
+                </a>
+                <a href="#form-status">
+                    Contact
+                </a>
+            </nav>
+        </aside>
+        
+        <div class="main-content">
+            <!-- main content -->
+            <main>
+                <div class="dev-card">
+                    <h2>Why a Devlog?</h2>
+                    <p>I like the idea of tracking what I'm working on, it gives me a sort of "evidence" that I'm actually working and not screwing about.</p>
+                </div>
+                <div class="dev-card">
+                    <h2>09/11/26</h2>
+                    <p>Worked on website and LinkedIn account. Updated new page routing, styled resume page, and cleaned up css from one big css file to a different one per page.<p>
+                    <p>Also cleaned up the right hand sidebar.</p>
+                </div>
+            </main>
+
+            <main>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanjqgel" method="POST">
+                    <input type="text" name="firstName" placeholder="First name*" class="input-half" required />
+                    <input type="text" name="lastName" placeholder="Last Name*" class="input-half" required />
+                    <input type="email" name="email" placeholder="Return email*" class="input-full" required />
+                    <input type="text" name="subject" placeholder="Subject*" class="input-full" required />
+                    <textarea name="message" placeholder="Message*" class="input-full message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+                <div id="form-status"></div>
+            </main>
+        </div>
+
+
+        <aside class="sidebar-right">
+            <nav>
+                <a href="https://github.com/Hassoonu" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/hasan-alsaeedi/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+                <a href="#" id="copyEmail">Email</a>
+                <script>
+                document.getElementById('copyEmail').addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent navigation
+                
+                    const email = "hasan2002618@gmail.com";
+                    navigator.clipboard.writeText(email).then(function() {
+                        
+                    }, function(err) {
+                        // Fallback if copy fails
+                        alert('Failed to copy email');
+                    });
+                });
+                </script>
+                <a href="../pages/resume.html">
+                    Resume
+                </a>
+            </nav>
+        </aside>
+    </div>
+
+    <footer style="text-align:center; padding:20px 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; color:#555;">
+        <p>© 2026 Hasan A. — Coding for a better world! &#x1F30D;</p>
+        <p><a href="#top" style="color:#555; text-decoration:none;">Back to top ↑</a></p>
+    </footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

@@ -44,7 +44,7 @@ if (canvas) {
       vx: 12 + Math.random() * 8,
       vy: 6 + Math.random() * 4,
       life: 45,
-      maxLife: 45,
+      maxLife: 135,
     };
   }
 
