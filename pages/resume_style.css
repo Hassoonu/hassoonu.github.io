@@ -1,0 +1,54 @@
+@import url('../base_style.css');
+
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: calc(100vh - 120px);
+}
+
+.responsive_pdf {
+  width: 100%;
+  max-width: 900px;
+  height: 85vh;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.resume_intro {
+  color: var(--text-main);
+}
+
+main.resume-container {
+  max-width: 1180px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-shadow: none;
+  margin: 0 auto 40px auto;
+  background: transparent;
+}
+
+.responsive_pdf {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 85vh;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.main-content-resume {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures everything remains horizontally centered */
+  width: 100%;
+  padding: 0 1rem;
+}
