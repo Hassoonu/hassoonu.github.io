@@ -108,3 +108,133 @@ figcaption {
   max-width: 550px;
   margin: 0 auto;
 }
+
+#block_I_logo {
+  display: block;
+  margin: auto;
+}
+
+.books_list {
+  padding-left: 30px;
+}
+
+.books_list li {
+  margin: 10px 0;;
+}
+
+#slideshow {
+    overflow: hidden;
+    height: 510px;
+    width: 728px;
+    margin: 0 auto;
+}
+
+
+/* Style each of the sides 
+  with a fixed width and height */
+.slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.slide-shade {
+    float: left;
+    height: 510px;
+    width: 728px;
+}
+
+.slide-shade img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+/* Add animation to the slides */
+.slideshow_container_turkey{
+
+    /* Calculate the total width on the
+    basis of number of slides */
+    width: calc(728px * 5);
+
+    display: flex;
+
+    /* Specify the animation with the
+    duration and speed */
+    animation: slide 20s ease infinite;
+}
+
+.slideshow_container_shades{
+
+    /* Calculate the total width on the
+    basis of number of slides */
+    width: calc(728px * 7);
+
+    display: flex;
+
+    /* Specify the animation with the
+    duration and speed */
+    animation: slide 21s ease infinite;
+}
+
+@keyframes slide {
+  0%, 16% {
+    transform: translateX(0);
+  }
+  20%, 36% {
+    transform: translateX(calc(-728px * 1));
+  }
+  40%, 56% {
+    transform: translateX(calc(-728px * 2));
+  }
+  60%, 76% {
+    transform: translateX(calc(-728px * 3));
+  }
+  80%, 96% {
+    transform: translateX(calc(-728px * 4));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-shade {
+  /* Slide 1 */
+  0%, 11% {
+    transform: translateX(0);
+  }
+  /* Transition to & pause on Slide 2 */
+  14%, 25% {
+    transform: translateX(calc(-728px * 1));
+  }
+  /* Transition to & pause on Slide 3 */
+  28%, 39% {
+    transform: translateX(calc(-728px * 2));
+  }
+  /* Transition to & pause on Slide 4 */
+  42%, 53% {
+    transform: translateX(calc(-728px * 3));
+  }
+  /* Transition to & pause on Slide 5 */
+  56%, 67% {
+    transform: translateX(calc(-728px * 4));
+  }
+  /* Transition to & pause on Slide 6 */
+  70%, 81% {
+    transform: translateX(calc(-728px * 5));
+  }
+  /* Transition to & pause on Slide 7 */
+  84%, 95% {
+    transform: translateX(calc(-728px * 6));
+  }
+  /* Reset back to Slide 1 */
+  100% {
+    transform: translateX(0);
+  }
+}
