@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="projects.css" />
   <!-- <meta http-equiv="Permissions-Policy" content="unload=*" /> -->
 </head>
 <body>
@@ -55,23 +55,23 @@
         <div class="main-content">
             <!-- main content -->
             <main>
-                <div class="card">
-                    <h3>This page is a work in progress :P</h3>
+                <div>
+                    <h3 id="project_intro">Projects</h3>
                 </div>
             </main>
 
-            <!-- <div class="card">
-                    <h3>Notable Projects:</h3>
+            <div class="card">
                     <h4>Earthrover Mini+ Open Source Project</h4>
+                    <p class="project-subtitle"><em> STM32 | Software | Code | Field</em></p>
                     <p>The Earthrover project required us to take the low-level C code 
                         made for the Earthrover Mini+ robot and deliver an addition to the LeRobot
                         library that is compatible with its commands such as `lerobot-teleoperate`
                         or `lerobot-record`. 
                         <br>
+                        We first had to review code that launched the threads on the STM32 for wireless and wired communication, motor control, the IMU, and more.
                         <br>
-                        It was very important for us to understand the low-level behavior of the code,
-                        especially since this was developed without frameworks like ROS2 that make it a bit
-                        more intuitive to understand what specific sections of the code did.
+                        Formatted control packet structure to send and recieve messages by calling our python api that was built on top of the underlying C code.
+
                     </p>
                     <div class="gallery">
                         <figure class="gallery-item">
@@ -79,81 +79,114 @@
                             <figcaption>The Earthrover Mini+ Robot!</figcaption>
                         </figure>
                     </div>
-                    <h4>SEEED Studio x NVIDIA hackathon: 1st place winners!</h4>
-                    <p>This was an extremely fun and memorable experience for me! A few members and I
-                        from SIGRobotics were accepted into the SeeedStudio x NVIDIA sponsored hackathon 
-                        and we built a matcha making robot to showcase bi-manual robot manipulation on two 
-                        SO-101 arms.
-                        <br>
-                        <br>
-                        We focused heavily on data collection and recorded several datasets worth of data over that weekend
-                        due to having troubles with the quality of data collected. 
-                        We also decided to run inference on <a href="https://huggingface.co/nvidia/GR00T-N1.5-3B" target="_blank">GROOT N1.5</a>
-                        since it was a foundational model designed to run on generalized humanoid robots. Multimodal inputs (such as our bi-manual
-                        follower arms!!!!!!!) work great for this model and it was also designed for manipulation tasks (moving cups, pouring matcha, 
-                        stirring it...)
-                    </p>
-                        <div class="tweet-embed">
-                          <blockquote class="twitter-tweet">
-                            <a href="https://twitter.com/sigrobotics/status/1984201430249443434"></a>
-                          </blockquote>
-                          <script async src="https://platform.twitter.com/widgets.js"></script>
-                        </div>               
-                </div> -->
+                </div>
 
-            <!-- <div class="card">
-                    <h4>F1Tenth</h4>
-                    <p>F1Tenth is a research-focused competition that runs in most robotics-related conferences.
-                        Teams have a 1:10 size RC car that's modded out with Lidar and many other sensors, with the 
-                        goal of creating an autonomous vehicle that can race around custom tracks and beat their opponents.
-                        F1Tenth has many cool aspects but the main focus is on its 3 main parts. <br>
-                        Perception, Planning, and Control. As Co-Lead of the UIUC F1Tenth team, I'm currently looking over, and 
-                        most importantly learning alongide, groups focused in each of the mentioned aspects of the autonomous vehicle.
-                        Our perception groups are focused on gathering sensor data and publishing data from their ROS2 (we're using Humble!)
-                        nodes in order to let the other groups know where we are in the global map. 
-                        <br>
-                        Our planning group is focused on learning and implementing local planning algorithms that help us decide
-                         what the best path of movement would be, and how to maneuver around hte 
-
-                    </p>
-                </div> -->
-
-
-            <!-- <div class="card">
-                    <h4>Autosampler Project</h4>
-                    <p>I'm currently working on the software aspect of an Autosampler project.
-                        It's still in early development so there isn't too much I think I can share
-                        however I can most definitely say I'm excited to reveal my work in it soon!
-                        Hint, there'll be a lot of Ignition!.
-                    </p>
-                </div> -->
-
-            <!-- I'm the team lead for a collaborative project between HERE Technologies x SIGRobotics at
-                         UIUC. We're currently laying down the architecture and project plans in order to present an official
-                        proposal in order to have a team work on the project over the summer.
-                        <br>
-                        This project has heavy focus on Flutter development for the Android Automative Operating System. Also 
-                        I think this project is very unique compared to what I usually go for since it forces me to slow down
-                        and think as a developer for the entire project timeline. What do I want to achieve? How do I want it
-                        to look like? Many times we students forget to plan ahead for these things and try to figure it out as
-                        we go, leading to taking too much unnecessary time on specific parts, while straying a little from the
-                        goal of our projects.
-                        <br>
-                        <br>
-                        Deliverables we made/are making for the project: <br>
-                        <ul style="padding-left: 30px;">
-                            <li>Initial Concept Specification Doc.</li>
-                            <li>Architecture Document</li>
-                            <li>Technical Specification</li>
-                            <li>Integration Plan</li>
-                        </ul> -->
-
-            <!-- <h3><a href="#wdcProject" class="project_header">F1 WDC Tracker</a></h3>
+                <div class="card">
+                    <h3><a href="#wdcProject" class="project_header">F1 WDC Tracker</a></h3>
+                    <p class="project-subtitle"><em> Linux/Windows | Socket Programming, OpenSSL | C, Python | Shared Libraries, Foreign Function Interface </em></p>
                     <p><b>Context:</b> Formula 1 is a racing series that features 20 Drivers racing around different tracks in different parts of the world. After each race, a driver gets a certain amount of points based on position, incurred penalties, and more. At the end of the year, the driver with the most points becomes the World Champion. This championship for the drivers is called the World Drivers' Championship (WDC)</p>
                     <p><br>The goal of my project is to code a program that communicates with an API over the network to receive data on how the WDC is going. This data will include the drivers, their names, and the points they have at the point of program execution.</p>
                     <p><br>After getting this data, the program will run ElectronJS to create a window, and display this data in an organized matter. This output will show the drivers in order of how they're doing in the championship, their points, and when the next race starts.</p>
                     <p><br>This program will start as the user startsup their device, this is mostly to add a layer of complexity so that I can learn as much as I can while working on this project.</p>
-                     -->
+                </div>
+
+                <div class="card">
+                    <h4>Seeed Studio x NVIDIA Hackathon — 1st Place Winners</h4>
+                    <p class="project-subtitle"><em> SO-101 Arms | LeRobot Platform/home-made API | Python | Robotics </em></p>
+                    <p>
+                      Our team from SIGRobotics took 1st place at the Seeed Studio x NVIDIA Hackathon by building a bi-manual matcha-making robot powered by two SO-101 arms.
+                    </p>
+                    <br>
+                    <p>
+                      <strong>Technical Implementation:</strong> We fine-tuned and ran inference on 
+                      <a href="https://huggingface.co/nvidia/GR00T-N1.5-3B" target="_blank" rel="noopener noreferrer">NVIDIA's GR00T-N1.5</a>, 
+                      a foundational model built for generalizable humanoid manipulation. Because the stock LeRobot data collection script for SO-101 only supported a single leader-follower pair, we modified the script to handle inputs across two leader and two follower arms simultaneously. Leveraging GR00T's multimodal capabilities, we trained the setup for complex manipulation tasks like moving cups, pouring, and stirring.
+                    </p>
+
+                    <p>
+                      <strong>Overcoming Hardware Failure:</strong> When our left wrist camera broke on the final day, it invalidated a significant portion of our dual-camera training data. With under an hour until judging, we pivoted quickly—scrapping faulty episodes and manually re-collecting over 100 fresh episodes to retrain our model just in time.
+                    </p>
+
+                    <div class="tweet-embed">
+                      <blockquote class="twitter-tweet">
+                        <a href="https://twitter.com/sigrobotics/status/1984201430249443434"></a>
+                      </blockquote>
+                      <script async src="https://platform.twitter.com/widgets.js"></script>
+                    </div>           
+                </div>
+
+            <div class="card">
+                    <h4>F1Tenth</h4>
+                    <p class="project-subtitle"><em>Sensor integration | ROS 2 | Python, C++ | Robotics </em></p>
+                    <p>F1Tenth is a research-focused competition that runs in most robotics-related conferences.
+                        Teams have a 1:10 size RC car that's modded out with Lidar and many other sensors, with the 
+                        goal of creating an autonomous vehicle that can race around custom tracks and beat their opponents.
+                        F1Tenth has many cool aspects but the main focus is on its 3 main parts. <br>
+                        Perception, Planning, and Control. As Co-Lead of the UIUC F1Tenth team, I was looking over, and 
+                        most importantly learning alongside, groups focused in each of the mentioned aspects of our autonomous vehicle.
+                        Our perception groups are focused on gathering sensor data and publishing data from their ROS2 (Humble)
+                        nodes in order to let the other groups know where we are in the global map. 
+                        <br>
+                        Our planning group is focused on learning and implementing local planning algorithms that help us decide
+                        what the best path of movement would be, and how to maneuver around the track. They compare the local map
+                        and the global map to see what the optimal move is, and send messages to the nodes controlling the motors on
+                        where to move next.
+                        <br>
+                        The control group focused on taking those input commands and 
+
+                    </p>
+                </div>
+
+
+            <div class="card">
+                    <h4>Autosampler Project</h4>
+                    <p class="project-subtitle"><em>Siemens S7-1500 | TIA Portal | Ladder Logic (LAD) & SCL | Industrial Automation</em></p>
+                    <p>
+                        Designed, programmed, and documented a multi-axis automated liquid sampling system built on a Siemens S7 PLC architecture using TIA Portal. Engineered robust real-time motor positioning, dosing control, and system safety mechanisms to execute precise, unattended sample collection cycles.
+                    </p>
+                 
+                    <p>
+                        <strong>Embedded Control & State Logic:</strong>
+                    </p>
+                    <ul>
+                        <li>Engineered a deterministic finite state machine (FSM) to coordinate sample intake, volumetric pumping, multi-vial rack index positioning, and automated purge/rinse cycles.</li>
+                        <li>Implemented closed-loop motor control logic for precise XYZ/indexing positioning and variable-rate peristaltic/syringe pumping operations.</li>
+                        <li>Built hardware fault-handling mechanisms including software watchdog timers, over-current/stall detection, limit-switch bounds checking, and liquid-level sensing.</li>
+                    </ul>
+                 
+                    <p>
+                        <strong>System Architecture & Documentation:</strong>
+                    </p>
+                 
+                    <ul>
+                        <li>Authored comprehensive technical documentation, including sequence of operations (SoO) manuals, timing diagrams, IO mapping spreadsheets, and detailed logic flowcharts to streamline debugging and future hardware iteration.</li>
+                        <li>Structured modular Function Blocks (FBs) and Data Blocks (DBs) in TIA Portal to ensure scalable memory allocation and clean separation between low-level driver logic and high-level sequence control.</li>
+                    </ul>
+                </div>
+
+            <div class="card">
+                <p class="project-subtitle"><em> Android Automative OS | Flutter | Python | Documentation and Prototyping </em></p>
+                I'm the team lead for a collaborative project between HERE Technologies x SIGRobotics at
+                UIUC. We're currently laying down the architecture and project plans in order to present an official
+                proposal in order to have a team work on the project over the summer.
+                <br>
+                This project has heavy focus on Flutter development for the Android Automative Operating System. Also 
+                I think this project is very unique compared to what I usually go for since it forces me to slow down
+                and think as a developer for the entire project timeline. What do I want to achieve? How do I want it
+                to look like? Many times we students forget to plan ahead for these things and try to figure it out as
+                we go, leading to taking too much unnecessary time on specific parts, while straying a little from the
+                goal of our projects.
+                <br>
+                <br>
+                Deliverables we made/are making for the project: <br>
+                <ul style="padding-left: 30px;">
+                    <li>Initial Concept Specification Doc.</li>
+                    <li>Architecture Document</li>
+                    <li>Technical Specification</li>
+                    <li>Integration Plan</li>
+                </ul>
+            </div>  
+                    
 
             <!-- <h3><a href="#cookieProject" class="project_header">CookieGPT</a></h3>
                     <p>
@@ -173,37 +206,7 @@
                         utilize the software.
                     </p>
 
-                    <br>
-
-                    <h3><a href="#scrapProject" class="project_header">Web Scraper</a></h3>
-                    <p>
-                        I've been wanting to learn how to do web scrapping for a 
-                        bit now. Since I've started the CookieGPT project, I realized 
-                        I can try and create my own web scrapping spider to create 
-                        a layer of complexity to the project and to learn web scrapping. 
-                        I think it's much better than simply downloading a dataset 
-                        and would give me more control over the things cookieGPT 
-                        would know.
-                    </p>
-
-                    <br>
-
-                    <h3><a href="#electronProject" class="project_header">ElectronJS</a></h3>
-                    <p>
-                        I recently learned about ElectronJS when looking for software I can use to 
-                        create a user UI for other projects. It's very useful as a tool because 
-                        no matter what project I make, I am more than likely going to 
-                        need a way to have people interact with it.
-                    </p>
-
-                    <br>
-
-                    <p>
-                        So far, I've learned how to do the basics. I plan on learning and experimenting 
-                        more with it when I finish more projects, since each project is 
-                        going to have different requirements. -->
-
-
+                    <br> -->
 
             <main>
                 <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanjqgel" method="POST">

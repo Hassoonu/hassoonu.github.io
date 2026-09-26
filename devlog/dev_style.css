@@ -3,6 +3,8 @@
 .dev-card {
     --bg-card: #0a0b0e; /*#fefae0;*/
     background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;

@@ -281,6 +281,11 @@ p {
   line-height: 1.6;
 }
 
+ul, ol {
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
 .contact-form {
   width: 100%;
   max-width: 600px;

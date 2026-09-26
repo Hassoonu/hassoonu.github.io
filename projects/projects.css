@@ -1,0 +1,103 @@
+@import url('../base_style.css');
+
+/* Limit the total layout width and keep it centered */
+.main-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Ensure central content leaves breathing room on the sides */
+.main-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Restrict main wrapper inside main-content if present */
+main {
+  width: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  padding: 0;
+}
+
+#project_intro {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: 1px;
+  margin: 20px 0 35px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Subtle line accents on both sides */
+#project_intro::before,
+#project_intro::after {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+}
+
+#project_intro::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* Projects Card Styling */
+.card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h3, .card h4 {
+  color: var(--text-main);
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.card p {
+  color: #c5c8d0;
+  line-height: 1.6;
+}
+
+/* Image scaling fixes */
+.gallery {
+  display: block;
+  padding: 16px 0 0 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  zoom: 1; /* Override the desktop zoom factor from base style */
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.85em;
+  margin-top: 8px;
+  color: #888;
+}
+
+/* Unwrapped content styling (e.g., F1 WDC section) */
+.main-content > h3, 
+.main-content > p {
+  width: 100%;
+  max-width: 800px;
+}
